@@ -207,11 +207,12 @@ stat, p = ttest_ind(likes_B[mask_B], likes_A[mask_A], equal_var=False)
 
 1. Установить зависимости:
 ```bash
-pip install numpy pandas scipy tqdm pandahouse
-# или
 pip install -r requirements.txt
 ```
-2. Настроить подключение к ClickHouse в `ab_test_power_monte_carlo.py` (словарь `connection`).
-3. Запустить скрипт командой `python ab_test_power_monte_carlo.py`.
+2. При необходимости настроить подключение к ClickHouse в `src/ab_test_power_monte_carlo.py` (словарь `connection`).
+3. Запустить скрипт:
+```bash
+python src/ab_test_power_monte_carlo.py
+```
 
 Скрипт выгружает необходимые агрегаты из базы, выполняет Монте-Карло-симуляции и выводит в консоль оценку мощности для заданных сценариев.
